@@ -85,7 +85,9 @@ class CatalogDataInitializer implements DataInitializer {
 				.save(new Disc("The Iron Giant", "tig", Money.of(34.99, EURO), "Animation/Action/Adventure", DiscType.BLURAY));
 		videoCatalog.save(new Disc("Battle Royale", "br", Money.of(19.99, EURO), "Action/Drama/Thriller", DiscType.BLURAY));
 		videoCatalog.save(new Disc("Oldboy", "old", Money.of(24.99, EURO), "Action/Drama/Thriller", DiscType.BLURAY));
-		videoCatalog.save(new Disc("Bill & Ted's Excellent Adventure", "bt", Money.of(29.99, EURO),
-				"Adventure/Comedy/Family", DiscType.BLURAY));
+		videoCatalog.save(new Disc("Bill & Ted's Excellent Adventure", "bt", Money.of(29.99, EURO),"Adventure/Comedy/Family", DiscType.BLURAY));
+		videoCatalog.save(new Disc("Half-Life 2", "hl2", Money.of(199.99, EURO), "Shooter", DiscType.GAME));
+		videoCatalog.save(new Disc("Starcraft", "sc", Money.of(79.99, EURO), "Strategie", DiscType.GAME));
+		videoCatalog.save(new Disc("Command & Conquer", "cc", Money.of(111.11, EURO), "Strategie", DiscType.GAME));
 	}
 }

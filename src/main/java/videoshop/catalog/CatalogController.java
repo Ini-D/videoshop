@@ -69,6 +69,15 @@ class CatalogController {
 
 		return "catalog";
 	}
+	
+	@GetMapping("/games")
+	String gamesCatalog(Model model) {
+
+		model.addAttribute("catalog", catalog.findByType(DiscType.GAME));
+		model.addAttribute("title", "catalog.game.title");
+
+		return "catalog";
+	}
 
 	// (｡◕‿◕｡)
 	// Befindet sich die angesurfte Url in der Form /foo/5 statt /foo?bar=5 so muss man @PathVariable benutzen
