@@ -71,6 +71,10 @@ public class VideoShop {
 			http.authorizeRequests().antMatchers("/**").permitAll().and().//
 					formLogin().loginPage(LOGIN_ROUTE).loginProcessingUrl(LOGIN_ROUTE).and(). //
 					logout().logoutUrl("/logout").logoutSuccessUrl("/");
+			
+			http.authorizeRequests().antMatchers("/h2-console/**").permitAll()
+			.anyRequest().authenticated();
+			http.headers().frameOptions().sameOrigin();
 		}
 	}
 }
